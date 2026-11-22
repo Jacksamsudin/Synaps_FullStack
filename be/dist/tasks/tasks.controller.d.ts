@@ -4,9 +4,59 @@ import { UpdateTaskDto } from './dto/update-task.dto';
 export declare class TasksController {
     private readonly tasksService;
     constructor(tasksService: TasksService);
-    create(createTaskDto: CreateTaskDto): import("./entities/task.entity").Task;
-    findAll(): import("./entities/task.entity").Task[];
-    findOne(id: number): import("./entities/task.entity").Task;
-    update(id: number, updateTaskDto: UpdateTaskDto): import("./entities/task.entity").Task;
-    remove(id: number): import("./entities/task.entity").Task;
+    create(createTaskDto: CreateTaskDto): Promise<{
+        judul: string;
+        deskripsi: string;
+        matakuliah: string;
+        deadline: Date;
+        prioritas: string;
+        status: string;
+        id: number;
+        createdAt: Date;
+        updatedAt: Date;
+    }>;
+    findAll(): Promise<{
+        judul: string;
+        deskripsi: string;
+        matakuliah: string;
+        deadline: Date;
+        prioritas: string;
+        status: string;
+        id: number;
+        createdAt: Date;
+        updatedAt: Date;
+    }[]>;
+    findOne(id: number): Promise<{
+        judul: string;
+        deskripsi: string;
+        matakuliah: string;
+        deadline: Date;
+        prioritas: string;
+        status: string;
+        id: number;
+        createdAt: Date;
+        updatedAt: Date;
+    }>;
+    update(id: number, updateTaskDto: UpdateTaskDto): Promise<{
+        judul: string;
+        deskripsi: string;
+        matakuliah: string;
+        deadline: Date;
+        prioritas: string;
+        status: string;
+        id: number;
+        createdAt: Date;
+        updatedAt: Date;
+    }>;
+    remove(id: number): Promise<{
+        judul: string;
+        deskripsi: string;
+        matakuliah: string;
+        deadline: Date;
+        prioritas: string;
+        status: string;
+        id: number;
+        createdAt: Date;
+        updatedAt: Date;
+    }>;
 }

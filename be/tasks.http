@@ -4,10 +4,10 @@ POST http://localhost:3000/tasks
 Content-Type: application/json
 
 {
-  "judul": "Tugas REST Client",
-  "deskripsi": "Pengujian endpoint POST",
+  "judul": "Pengujian Persistensi PostgreSQL",
+  "deskripsi": "Memastikan data tetap tersimpan setelah server restart",
   "matakuliah": "Pemrograman Web",
-  "deadline": "2026-11-25",
+  "deadline": "2026-11-30",
   "prioritas": "tinggi",
   "status": "belum-selesai"
 }
@@ -16,7 +16,7 @@ Content-Type: application/json
 GET http://localhost:3000/tasks
 
 ### GET - FIND ONE
-GET http://localhost:3000/tasks/2
+GET http://localhost:3000/tasks/1
 
 ### PATCH - UPDATE
 PATCH http://localhost:3000/tasks/1
